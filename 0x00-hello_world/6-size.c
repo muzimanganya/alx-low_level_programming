@@ -1,4 +1,5 @@
 #include <stdio.h>
+//size
 int main(void)
 {
 		char a;
