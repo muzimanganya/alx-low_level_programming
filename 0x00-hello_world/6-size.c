@@ -1,10 +1,4 @@
 #include <stdio.h>
-
-/**
- *   * main - Prints the sizeof many var types
- *     *
- *       * Return: Always 0 (Success)
- *         */
 int main(void)
 {
 		char a;
@@ -20,3 +14,4 @@ int main(void)
 											printf("Size of a float: %d byte(s)\n", sizeof(e));
 												return (0);
 }
+
