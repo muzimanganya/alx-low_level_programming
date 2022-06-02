@@ -1,5 +1,7 @@
 #include <stdio.h>
-//Prints the sizeof many var types
+/*
+ * Prints the sizeof many var types
+ */
 int main(void)
 {
 		char a;
