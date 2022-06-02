@@ -1,5 +1,5 @@
 #include <stdio.h>
-//size
+//Prints the sizeof many var types
 int main(void)
 {
 		char a;
