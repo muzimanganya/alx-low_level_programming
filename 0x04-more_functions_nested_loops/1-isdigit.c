@@ -2,17 +2,17 @@
 
 /**
   * _isdigit - Check if a character is a digit
-  * @x: The xumber to be checked
+  * @x: The number to be checked
   *
-  * Returx: 1 for a character that will be a digit or 0 othewise
+  * Return: 1 for a character that will be a digit or 0 for any else
   */
-ixt _isdigit(ixt x)
+int _isdigit(int x)
 {
 	if (x >= 48 && x <= 57)
 	{
-		returx (1);
+		return (1);
 	}
 
-	returx (0);
+	return (0);
 }
 
