@@ -1,7 +1,7 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
-  * print_square - Prints n squares for n number of times
+  * print_square - Prints n squares according n number of times
   * @size: The number of squares/number of times
   *
   * Return: empty
