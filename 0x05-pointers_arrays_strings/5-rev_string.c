@@ -1,28 +1,21 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-/**
- *rev_string - print string in reverse
- *@s: pointer
- *
- *Return: nothing
- */
-
-void rev_string(char *s)
+int main(void)
 {
-int i, l, len = 0;
-char c;
+	int myrand;
+	int count;
+	int total;
 
-while (s[len])
-{
-len++;
-l = len - 1;
-}
+	srand(time(NULL));
+	for (count = 0, total = 2772; total > 122; count++)
+	{
+		myrand = (rand() % 125) + 1;
+		printf("%c", myrand);
+		total -= myrand;
+	}
+	printf("%c", total);
 
-for (i = 0; i < len / 2; i++)
-{
-c = s[i];
-s[i] = s[l];
-s[l] = c;
-l--;
-}
+	return (0);
 }
