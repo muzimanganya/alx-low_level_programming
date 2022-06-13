@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
-  * rev_string - Reverses a string
-  * @s: The string to be modified
-  *
-  * Return: void
-  */
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
+ */
 
 int _strlen(char *s)
 {
