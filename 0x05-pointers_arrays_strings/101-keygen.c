@@ -1,26 +1,54 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
-  * puts2 - Prints every other character of a string
-  * @str: The string to be treated
-  *
-  * Return: void
-  */
-void puts2(char *str)
+ * main - Generates random valid passwords for the
+ *        program 101-crackme.
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	int i;
-	int j = 0;
+	char password[84];
+	int index = 0, sum = 0, diff_half1, diff_half2;
 
-	while (str[j] != '\0')
+	srand(time(0));
+
+	while (sum < 2772)
 	{
-		j++;
+		password[index] = 33 + rand() % 94;
+		sum += password[index++];
 	}
 
-	for (i = 0; i < j; i += 2)
+	password[index] = '\0';
+
+	if (sum != 2772)
 	{
-		_putchar(str[i]);
+		diff_half1 = (sum - 2772) / 2;
+		diff_half2 = (sum - 2772) / 2;
+		if ((sum - 2772) % 2 != 0)
+			diff_half1++;
+
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half1))
+			{
+				password[index] -= diff_half1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half2))
+			{
+				password[index] -= diff_half2;
+				break;
+			}
+		}
 	}
 
-	_putchar('\n');
+	printf("%s", password);
+
+	return (0);
 }
-
