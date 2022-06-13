@@ -1,21 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 
-int main(void)
+/**
+ *print_rev - print strings in reverse
+ *@s: characters
+ *
+ *Return: nothing
+ */
+
+void print_rev(char *s)
 {
-	int myrand;
-	int count;
-	int total;
+int i;
 
-	srand(time(NULL));
-	for (count = 0, total = 2772; total > 122; count++)
-	{
-		myrand = (rand() % 125) + 1;
-		printf("%c", myrand);
-		total -= myrand;
-	}
-	printf("%c", total);
-
-	return (0);
+for (i = 0; s[i] != '\0'; i++)
+;
+while (i)
+{
+_putchar(s[i - 1]);
+i--;
+}
+_putchar('\n');
 }
