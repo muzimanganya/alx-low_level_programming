@@ -13,5 +13,5 @@ main:
 	syscall
 
 section .rodata
-	msg: db "Hello, Alx School", 10
+	msg: db "Hello, Holberton", 10
 	msglen: equ $ - msg
